@@ -1,2 +1,2 @@
 n = 10
-output_dir = './data/'
+output_dir = './results/'

@@ -8,7 +8,7 @@ sbatch <<EOT
 #SBATCH --array=0-1
 
 module load miniconda
-conda activate {{cookiecutter.project_name}}
+source activate {{cookiecutter.project_name}}
 
 srun Rscript experiments/experiment.R $1
 EOT

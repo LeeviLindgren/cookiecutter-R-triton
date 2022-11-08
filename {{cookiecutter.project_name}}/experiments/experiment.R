@@ -24,3 +24,4 @@ experiment <- function(n_draws) {
 out = experiment(n)
 filename = paste0(job_id, '_', array_id, '.RDS')
 saveRDS(out, file.path(output_dir, filename))
+message("DONE!")
