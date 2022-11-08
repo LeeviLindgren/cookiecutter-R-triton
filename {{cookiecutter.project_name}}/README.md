@@ -15,6 +15,10 @@ To remove the created environment call
 conda remove -n {{cookiecutter.project_name}} --all
 conda env list
 ```
+When the environment is activated, adding new packages happens using 
+`conda install package-name=2.3.4` after which you should also update the 
+`environment.yml` file. This happens calling `conda env export > environment.yml`.
+
 
 # Folder structure
 - `config` configuration files that can be sourced before running a specific 
@@ -22,7 +26,7 @@ conda env list
 - `data` data related to the experiments. Should contain the raw data and 
   possible derivates of the raw data. (note that if data is large, it might 
   make sense to store it, e.g., in remote disk.)
-- `experiments` contains the script(s) for to run the actual experiments
+- `experiments` contains the script(s) to run the actual experiments.
 - `out` logs from the sbatch jobs go here
 - `R` source/utility code the experiments use is stored here
 - `results` results from the experiments.
