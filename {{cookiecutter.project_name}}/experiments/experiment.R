@@ -1,5 +1,8 @@
-# Source first the configuration file.
-# Expected variables:
+# Run an experiment that generates a specified amount of random draws from a
+# standard normal distribution. 
+# 
+# Expects a path of the configuration file as the only command line argument
+# with the following variables defined:
 #   n: integer specifying the number of draws
 #   output_dir: string specifying the output directory
 args = commandArgs(trailingOnly = TRUE)
@@ -9,7 +12,7 @@ if (file.exists(args[1])) {
   stop(paste0('File "', args[1], '" not found'))
 }
 
-# Get job details from the environment. Slurm sets these up for you.
+# Get job details from the environment.
 job_id = Sys.getenv('SLURM_ARRAY_JOB_ID', 0)
 array_id = Sys.getenv('SLURM_ARRAY_TASK_ID', 0)
 
