@@ -6,7 +6,10 @@ Create first a virtual envrionment from the `environment.yml` file:
 ```
 conda env create -f enrionment.yml
 ```
-Then activate the virtual environment using `conda activate {{cookiecutter.project_name}}` and deactivate with `conda deactivate`.
+Then activate the virtual environment using 
+`conda activate {{cookiecutter.project_name}}` and deactivate with 
+`conda deactivate`.
+
 To remove the created environment call
 ```
 conda remove -n {{cookiecutter.project_name}} --all
@@ -21,7 +24,7 @@ conda env list
   make sense to store it, e.g., in remote disk.)
 - `experiments` contains the script(s) for to run the actual experiments
 - `out` logs from the sbatch jobs go here
-- `R` any source/utility code the experiments use can be stored here
+- `R` source/utility code the experiments use is stored here
 - `results` results from the experiments.
 - `shell` scripts to launch Slurm jobs
 
