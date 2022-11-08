@@ -1,6 +1,18 @@
 # {{cookiecutter.project_name}}
 {{cookiecutter.project_short_description}}
 
+# Getting started
+Create first a virtual envrionment from the `environment.yml` file:
+```
+conda env create -f enrionment.yml
+```
+Then activate the virtual environment using `conda activate {{cookiecutter.project_name}}` and deactivate with `conda deactivate`.
+To remove the created environment call
+```
+conda remove -n {{cookiecutter.project_name}} --all
+conda env list
+```
+
 # Folder structure
 - `config` configuration files that can be sourced before running a specific 
     experiment.
@@ -8,12 +20,12 @@
   possible derivates of the raw data. (note that if data is large, it might 
   make sense to store it, e.g., in remote disk.)
 - `experiments` contains the script(s) for to run the actual experiments
+- `out` logs from the sbatch jobs go here
 - `R` any source/utility code the experiments use can be stored here
 - `results` results from the experiments.
-- `out` logs from the Triton's sbatch jobs go here
-- `shell` scripts to launch Triton jobs
+- `shell` scripts to launch Slurm jobs
 
-# How to run an 
+# How to run?
 First activate you virtual environment.
 
 Folder `experiments` collects all executable scripts. One can simply run the 
