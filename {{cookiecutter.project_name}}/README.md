@@ -4,7 +4,7 @@
 # Getting started
 Create first a virtual envrionment from the `environment.yml` file:
 ```
-conda env create -f enrionment.yml
+conda env create -f environment.yml
 ```
 Then activate the virtual environment using 
 `conda activate {{cookiecutter.project_name}}` and deactivate with 
